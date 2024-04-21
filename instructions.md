@@ -207,30 +207,33 @@ sources = newsapi.get_sources()
 
 ### Data Source: Newspaper Articles
 
-You can also use `Newspaper3k` package to scrape and curate news articles. You need to install the [Newspaper3k library](https://github.com/codelucas/newspaper) by running the following command in Command Prompt or Terminal:
+You can also use `Newspaper4k` package to scrape and curate news articles. You need to install the [Newspaper4k library](https://github.com/AndyTheFactory/newspaper4k) by running the following command in Command Prompt or Terminal:
 
 ```shell
 # For Windows users
-> python -m pip install newspaper3k
+> python -m pip install newspaper4k
 
 # For macOS users
-> python3 -m pip install newspaper3k
+> python3 -m pip install newspaper4k
 ```
 
-Here's an example from the [Newspaper3k docs page](https://newspaper.readthedocs.io/en/latest/):
+Here's an example from the [Newspaper4k Docs page](https://newspaper4k.readthedocs.io/en/latest/):
 
 ```python
-from newspaper import Article
+import newspaper
 
-url = 'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
-article = Article(url)
-article.download()
-article.parse()
-article_text = article.text
-print(article_text) # Output: Washington (CNN) -- Not everyone subscribes to a New Year's resolution...
+article = newspaper.article('https://edition.cnn.com/2023/10/29/sport/nfl-week-8-how-to-watch-spt-intl/index.html')
+
+print(article.authors)
+# ['Hannah Brewitt', 'Minute Read', 'Published', 'Am Edt', 'Sun October']
+
+print(article.publish_date)
+# 2023-10-29 09:00:15.717000+00:00
+
+print(article.text)
+# New England Patriots head coach Bill Belichick, right, embraces Buffalo Bills head coach Sean McDermott ...
 ```
 
-(**Note**: The GitHub repository for Newspaper3k is 4 years old, but it appears to still work after testing.)
 
 ### Data Source: IMDB Movie Reviews
 
