@@ -364,7 +364,14 @@ print(score)
 
 Notice: If you receive `Resource vader_lexicon not found` error when using `nltk`, you need to enter `python` in **Command Prompt** (or `python3` in **Terminal** on macOS), then enter `import nltk` and `nltk.download('vader_lexicon')` in Python interactive shell.
 
+You can also use [TextBlob](https://github.com/sloria/TextBlob) library, which is built on top of NLTK, for almost everything that NLTK does. Below is the brief introduction of TextBlob from its GitHub page:
+
+> TextBlob is a Python library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, and more.
+
 If you perform natural language processing, you can draw interesting insights from text data collected from the web. For instance, if you monitor a specific subreddit related to a political topic, you can gauge the sentiment of the community by analyzing the text of each post and comment. Similarly, you can analyze discussions on subreddits dedicated to movies to identify which recent movies have received the most negative reviews. There are tons of cool options here!
+
+
+
 
 ### Text Similarity
 
