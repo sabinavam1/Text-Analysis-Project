@@ -23,7 +23,7 @@ You should read this document in a somewhat non-linear/spiral fashion:
 1. Scan through **Part 1** to get a sense of what data sources are available. You can select one or two sources that interests you and try to retrieve text from them. Note that you do not need to try all the data sources.
 2. Scan through **Part 2** to see a bunch of cool examples for what you can do with your text. You can also ask GenAI tools what else you can do with Python to process, analyze or visulize the text.
 3. Choose (at least) one data source from **Part 1** and apply required techniques from **Part 2**, plus any additional techniques that interest you, to analyze, manipulate, transform or visualize the text.
-4. Make sure there is one clear entry `.py` file for the entire project. Multiple `.py` files are encouraged to break the project into smaller, modular components. 
+4. Make sure there is one clear entry `.py` file for the entire project. Multiple `.py` files are encouraged to break the project into smaller, modular components.
 5. Use the `if __name__ == "__main__"` idiom in the `.py` files. Your code should be executed when the entry Python file is run.
     ```python
     if __name__ == "__main__":
