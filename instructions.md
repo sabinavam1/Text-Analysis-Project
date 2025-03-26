@@ -32,7 +32,7 @@ You should read this document in a somewhat non-linear/spiral fashion:
 6. You are required to experiment with learning from GenAI tools (see more in **Part 3**).
 7. Write a brief document (**Part 4**) describing your process and your reflection.
 8. If you use any code or solutions that is not written by you (or that you learned from other places such as StackOverFlow/GitHub), please add Python comments (before the block of code) describing where you got/learned it from.
-9. Generally I **DO NOT** recommend using `numpy`, `pandas`, `sklearn` or `matplotlib` in this project, unless there is no other alternative way of processing and analyazing your data.
+9. Generally I **DO NOT** recommend using `numpy`, `pandas`, `sklearn` or `matplotlib` in this project, unless there is no other alternative way of processing and analyazing your data. For instance, if you need to perform complex matrix computations or advanced visualizations, it is acceptable to use these libraries. Please justify your choice in your project documentation.
 
 ---
 
@@ -54,9 +54,12 @@ To download the text inside Python, you can use the following code:
 import urllib.request
 
 url = 'https://www.gutenberg.org/cache/epub/730/pg730.txt'
-with urllib.request.urlopen(url) as f:
-    text = f.read().decode('utf-8')
-    print(text) # for testing
+try:
+    with urllib.request.urlopen(url) as f:
+        text = f.read().decode('utf-8')
+        print(text)  # for testing
+except Exception as e:
+    print("An error occurred:", e)
 ```
 
 Note that there is a preamble (boilerplate on Project Gutenberg, table of contents, etc.) that has been added to the text that you might want to strip out using Python code when you do your analysis. There is similar material at the end of the file.
@@ -431,7 +434,7 @@ This will generate the following plot. The coordinates don't have any special me
 
 You can use Markov analysis to learn a generative model of the text that you collect from the web and use it to generate new texts. You can even use it to create mashups of multiple texts. One of possibilities in this space would be to create literary mashups automatically. Again, let professor know if you go this route and we can provide more guidance.
 
-### More
+### LLM (Large Language Model) Text Generation
 
 You can explore further possibilities by using the [OpenAI API](https://platform.openai.com/docs/overview). Feel free to ask for an API token if you're interested, and I'd be happy to provide it. I highly encourage you to give this a try!
 
@@ -441,7 +444,7 @@ You can explore further possibilities by using the [OpenAI API](https://platform
 
 As you work through this project and experiment with different libraries in Python, you may encounter roadblocks or have questions about your code. That's when you can use GenAI tools, like ChatGPT to clear out any issues. You are also encouraged to learn other approaches, besides the techniques mentioned above, to process, analyze and visualize your own text dataset in Python from ChatGPT or other GenAI tools, who will serve as your assistant, providing helpful suggestions, aiding your learning process.
 
-**Reminder**: While GenAI tools can be incredibly helpful in resolving issues or suggesting new approaches, it’s important not to rely too heavily on them. Always test and validate the generated code, making sure it meets the project requirements and that you fully understand how the code works.
+**Reminder**: While GenAI tools can be incredibly helpful in resolving issues or suggesting new approaches, it’s important not to rely too heavily on them. Always test and validate the generated code, making sure it meets the project requirements and that you fully understand how the code works. Include comments in your code that indicate which parts were generated with GenAI assistance, and provide links or references to the sources if applicable. This practice not only helps maintain academic integrity but also demonstrates your learning process.
 
 Here's how to make the most out of GenAI tools (using ChatGPT as an example):
 
@@ -486,4 +489,4 @@ From a learning perspective, what was your biggest takeaway from this project? H
 3. Submit your project's GitHub repository URL to Canvas.
 
 ---
-updated: 10/18/2024
+updated: 3/26/2025
